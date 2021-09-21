@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <duplicate-finder-result version="1">
-    <project artifactId="hello-drm" groupId="org.shgx" version="1.0-SNAPSHOT" type="jar"/>
+    <project artifactId="drm" groupId="com.shgx" version="1.0.0.20210921" type="jar"/>
     <configuration skip="false" quiet="false" checkCompileClasspath="true" checkRuntimeClasspath="true" checkTestClasspath="true" failBuildInCaseOfDifferentContentConflict="false" failBuildInCaseOfEqualContentConflict="false" failBuildInCaseOfConflict="true" printEqualFiles="false" preferLocal="true" includeBootClasspath="false" bootClasspathProperty="sun.boot.class.path" includePomProjects="false" useDefaultResourceIgnoreList="true" useDefaultClassIgnoreList="true" useResultFile="true" resultFileMinClasspathCount="2" resultFile="/Users/guangxush/IDEA/hello-drm/target/duplicate-finder-result.xml">
         <ignoredResourcePatterns/>
         <ignoredClassPatterns/>

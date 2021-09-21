@@ -1,6 +1,6 @@
 package com.shgx.drm.annotation;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -15,7 +15,7 @@ import java.lang.annotation.Target;
  */
 @Retention(RetentionPolicy.RUNTIME) //运行时解析
 @Target({ElementType.TYPE}) //注解目标为类
-@Autowired //被Spring加载
+@Component //被Spring加载
 public @interface DResource {
     /**
      * 资源版本

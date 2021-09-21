@@ -1,15 +1,19 @@
 package com.shgx.drm.controller;
 
+import com.shgx.drm.annotation.DAttribute;
 import com.shgx.drm.service.HelloDrm;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author: guangxush
  * @create: 2021/09/21
  */
+@RestController
 public class HelloController {
 
+    @DAttribute(resourceVersion = "0.0.1", resourceName = HelloDrm.class, attributeName = "helloDrm", attributeType = "String")
     private HelloDrm helloDrm;
 
     @GetMapping("/hello")
