@@ -12,7 +12,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class TestPublisher {
     public static void main(String[] args) throws Exception {
-        String serverAddress = "127.0.0.1:6688";
+        String serverAddress = "127.0.0.1:6699";
         String registryAddress = "127.0.0.1:2181";
 
         ConfigPublisher configPublisher = new ConfigPublisher(serverAddress, ConfigRegistryFactory.getInstance(ConfigRegistryEnum.zookeeper, registryAddress));

@@ -1,13 +1,10 @@
 package com.shgx.drm.subscriber;
 
 import com.shgx.drm.annotation.DAttribute;
-import com.shgx.drm.annotation.DResource;
 import com.shgx.drm.commons.ConfigConstants;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanClassLoaderAware;
-import org.springframework.beans.factory.BeanInitializationException;
-import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;

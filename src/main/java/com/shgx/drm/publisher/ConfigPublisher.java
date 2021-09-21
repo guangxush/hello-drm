@@ -142,13 +142,13 @@ public class ConfigPublisher implements InitializingBean, BeanPostProcessor {
                 .serviceVersion(version);
         try {
             configRegistry.register(configModel);
-            log.debug("register service...", configModel.toString());
+            log.debug("register config...", configModel.toString());
         } catch (Exception e) {
             log.error("register fail...", configModel.toString(), e);
         }
 
         if(!handlerMap.containsKey(configKey)){
-            log.info("Loading service..."+ configKey);
+            log.info("Loading config..."+ configKey);
             handlerMap.put(configKey, configRegisterBean);
         }
     }
@@ -188,7 +188,7 @@ public class ConfigPublisher implements InitializingBean, BeanPostProcessor {
         try {
             // 尝试配置注册到注册中心
             configRegistry.register(configModel);
-            log.debug("register service... {}", configModel.toString());
+            log.debug("register config... {}", configModel.toString());
         } catch (Exception e) {
             log.error("register fail {}", configModel.toString(), e);
         }
