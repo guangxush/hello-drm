@@ -12,7 +12,7 @@ import org.springframework.beans.factory.FactoryBean;
 @Slf4j
 public class SubscribeBean implements FactoryBean {
 
-    private Class<?> interfaceClass;
+    private Class<?> resourceName;
     private String resourceVersion;
     private String registryType;
     private String registryAddress;
@@ -26,7 +26,7 @@ public class SubscribeBean implements FactoryBean {
 
     @Override
     public Class<?> getObjectType() {
-        return interfaceClass;
+        return resourceName;
     }
 
 
@@ -35,8 +35,8 @@ public class SubscribeBean implements FactoryBean {
         return true;
     }
 
-    public void setInterfaceClass(Class<?> interfaceClass) {
-        this.interfaceClass = interfaceClass;
+    public void setResourceName(Class<?> resourceName) {
+        this.resourceName = resourceName;
     }
 
     public void setResourceVersion(String resourceVersion) {
@@ -52,9 +52,9 @@ public class SubscribeBean implements FactoryBean {
     }
 
     public void init() throws Exception {
-        this.object = ConfigSubscriber.create(interfaceClass, resourceVersion, ConfigRegistryFactory.getInstance(
+        this.object = ConfigSubscriber.create(resourceName, resourceVersion, ConfigRegistryFactory.getInstance(
                 ConfigRegistryEnum.valueOf(registryType), registryAddress
         ));
-        log.info("SubscribeBean {} init ...", interfaceClass.getName());
+        log.info("SubscribeBean {} init ...", resourceName.getName());
     }
 }

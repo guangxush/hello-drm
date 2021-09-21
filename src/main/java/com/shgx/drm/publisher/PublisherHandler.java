@@ -44,7 +44,7 @@ public class PublisherHandler extends SimpleChannelInboundHandler<ConfigRequest>
                 configResponse.setResult(result);
             } catch (Throwable throwable) {
                 configResponse.setException(throwable.toString());
-                log.error("Rpc server handle request error", throwable);
+                log.error("Config server handle request error", throwable);
             }
             channelHandlerContext.writeAndFlush(configResponse)
                     .addListener((ChannelFutureListener) channelFuture -> log.debug("send response for request:" + configRequest.getRequestId()));

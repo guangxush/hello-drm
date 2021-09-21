@@ -51,12 +51,12 @@ public @interface DAttribute {
      *
      * @return
      */
-    String attributeName();
+    String attributeName() default "drm";
 
     /**
      * 资源类型
      *
      * @return
      */
-    String attributeType();
+    String attributeType() default "String";
 }

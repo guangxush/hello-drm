@@ -20,7 +20,7 @@
         <dependency>
             <groupId>com.shgx</groupId>
             <artifactId>drm</artifactId>
-            <version>1.0.0.20210921</version>
+            <version>1.0.0.20210922.2</version>
         </dependency>
 
         <dependency>

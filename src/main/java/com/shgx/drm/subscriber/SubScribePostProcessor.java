@@ -83,7 +83,7 @@ public class SubScribePostProcessor implements BeanFactoryPostProcessor, BeanCla
         BeanDefinitionBuilder builder = BeanDefinitionBuilder.genericBeanDefinition(SubscribeBean.class);
         builder.setInitMethodName(ConfigConstants.INIT_METHOD);
         builder.addPropertyValue("resourceVersion", annotation.resourceVersion());
-        builder.addPropertyValue("interfaceClass", field.getType());
+        builder.addPropertyValue("resourceName", field.getType());
         builder.addPropertyValue("registryType", annotation.registryType());
         builder.addPropertyValue("registryAddress", annotation.registryAddress());
 

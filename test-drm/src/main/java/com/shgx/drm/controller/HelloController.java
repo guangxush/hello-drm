@@ -13,12 +13,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloController {
 
-    @DAttribute(resourceVersion = "0.0.1", resourceName = HelloDrm.class, attributeName = "helloDrm", attributeType = "String")
+    @DAttribute(resourceVersion = "0.0.1", resourceName = HelloDrm.class)
     private HelloDrm helloDrm;
 
     @GetMapping("/hello")
     public String testHello(@RequestParam String param){
-        // http://localhost:8081/hello?param=rpc
+        // http://localhost:8082/hello?param=drm
         return helloDrm.hello(param);
     }
 }

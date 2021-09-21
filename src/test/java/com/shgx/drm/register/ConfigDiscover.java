@@ -36,19 +36,19 @@ public class ConfigDiscover {
                 .builder()
                 .configName("test1")
                 .configPort(8088)
-                .serviceVersion("1.0.0")
+                .configVersion("1.0.0")
                 .address("127.0.0.1");
         ConfigModel test22 = ConfigModel
                 .builder()
                 .configName("test2")
                 .configPort(8088)
-                .serviceVersion("1.0.0")
+                .configVersion("1.0.0")
                 .address("127.0.0.2");
         ConfigModel test33 = ConfigModel
                 .builder()
                 .configName("test3")
                 .configPort(8088)
-                .serviceVersion("1.0.0")
+                .configVersion("1.0.0")
                 .address("127.0.0.3");
 
         configRegistry.register(test11);
@@ -75,13 +75,13 @@ public class ConfigDiscover {
                 .builder()
                 .configName("test")
                 .configPort(8088)
-                .serviceVersion("1.0.0")
+                .configVersion("1.0.0")
                 .address("127.0.0.1"));
         configRegistry.register(ConfigModel
                 .builder()
                 .configName("test")
                 .configPort(8088)
-                .serviceVersion("1.0.0")
+                .configVersion("1.0.0")
                 .address("127.0.0.1"));
     }
 
@@ -91,21 +91,21 @@ public class ConfigDiscover {
                 .builder()
                 .configName("test")
                 .configPort(8088)
-                .serviceVersion("1.0.0")
+                .configVersion("1.0.0")
                 .address("127.0.0.1"));
 
         configRegistry.register(ConfigModel
                 .builder()
                 .configName("test")
                 .configPort(8088)
-                .serviceVersion("1.0.0")
+                .configVersion("1.0.0")
                 .address("127.0.0.2"));
 
         configRegistry.register(ConfigModel
                 .builder()
                 .configName("test")
                 .configPort(8088)
-                .serviceVersion("1.0.0")
+                .configVersion("1.0.0")
                 .address("127.0.0.3"));
 
 

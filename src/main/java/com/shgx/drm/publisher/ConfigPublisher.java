@@ -139,7 +139,7 @@ public class ConfigPublisher implements InitializingBean, BeanPostProcessor {
                 .address(host)
                 .configName(configName)
                 .configPort(port)
-                .serviceVersion(version);
+                .configVersion(version);
         try {
             configRegistry.register(configModel);
             log.debug("register config...", configModel.toString());
@@ -184,7 +184,7 @@ public class ConfigPublisher implements InitializingBean, BeanPostProcessor {
                 .address(host)
                 .configName(configName)
                 .configPort(port)
-                .serviceVersion(version);
+                .configVersion(version);
         try {
             // 尝试配置注册到注册中心
             configRegistry.register(configModel);

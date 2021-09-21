@@ -48,7 +48,7 @@ public class ConfigModel {
         return this;
     }
 
-    public ConfigModel serviceVersion(String configVersion) {
+    public ConfigModel configVersion(String configVersion) {
         this.configVersion = configVersion;
         return this;
     }
