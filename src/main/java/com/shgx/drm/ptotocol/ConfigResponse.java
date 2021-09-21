@@ -15,4 +15,13 @@ public class ConfigResponse implements Serializable {
     private String requestId;
     private Object result;
     private String exception;
+
+    @Override
+    public String toString() {
+        return "ConfigResponse{" +
+                "requestId='" + requestId + '\'' +
+                ", result=" + result +
+                ", exception='" + exception + '\'' +
+                '}';
+    }
 }

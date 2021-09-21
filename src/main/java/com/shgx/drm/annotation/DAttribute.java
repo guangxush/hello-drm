@@ -19,6 +19,34 @@ import java.lang.annotation.Target;
 public @interface DAttribute {
 
     /**
+     * 资源版本
+     *
+     * @return
+     */
+    String resourceVersion() default "0.0.1";
+
+    /**
+     * 资源名称
+     *
+     * @return
+     */
+    Class<?> resourceName() default Object.class;
+
+    /**
+     * 资源服务地址
+     *
+     * @return
+     */
+    String registryAddress() default "127.0.0.1:2181";
+
+    /**
+     * 注册中心
+     *
+     * @return
+     */
+    String registryType() default "zookeeper";
+
+    /**
      * 资源名称
      *
      * @return
