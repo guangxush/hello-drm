@@ -22,7 +22,7 @@ import java.rmi.registry.Registry;
  * @create: 2021/09/21
  */
 @Slf4j
-public class ConfigSubscriber extends SimpleChannelInboundHandler<ConfigProperties> {
+public class ConfigSubscriber extends SimpleChannelInboundHandler<ConfigResponse> {
 
     private final Object obj = new Object();
     private ConfigRegistry configRegistry;
@@ -89,7 +89,7 @@ public class ConfigSubscriber extends SimpleChannelInboundHandler<ConfigProperti
     }
 
     @Override
-    protected void channelRead0(ChannelHandlerContext channelHandlerContext, ConfigProperties configProperties) throws Exception {
+    protected void channelRead0(ChannelHandlerContext channelHandlerContext, ConfigResponse configResponse) throws Exception {
         this.configResponse = configResponse;
 
         synchronized (obj){
