@@ -130,8 +130,8 @@ public class ConfigPublisher implements InitializingBean, BeanPostProcessor {
     public void addResource(Object configRegisterBean, String serverAddress){
         DResource dResource = configRegisterBean.getClass().getAnnotation(DResource.class);
         String configName = dResource.resourceName().getName();
-        String version = dResource.resourceVersion();
-        String configKey = ConfigUtils.generateKey(configName, version);
+        String configVersion = dResource.resourceVersion();
+        String configKey = ConfigUtils.generateKey(configName, configVersion);
         String[] address = serverAddress.split(":");
         String host = address[0];
         int port = Integer.parseInt(address[1]);
@@ -139,7 +139,7 @@ public class ConfigPublisher implements InitializingBean, BeanPostProcessor {
                 .address(host)
                 .configName(configName)
                 .configPort(port)
-                .configVersion(version);
+                .configVersion(configVersion);
         try {
             configRegistry.register(configModel);
             log.debug("register config...", configModel.toString());
